@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var radioButtons: [UIButton]!
-    var titleButton = ""
+    var titleButton: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,18 +25,18 @@ class ViewController: UIViewController {
         radioButtons.forEach { $0.isSelected = false }
         sender.isSelected = true
         titleButton = sender.currentTitle!
-        performSegue(withIdentifier: Storyboard.ShowImageSegue, sender: sender)
+        print(sender.currentTitle!)
     }
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Storyboard.ShowImageSegue {
-            if let vc = segue.destination as? DetailViewController {
-                vc.data = titleButton
-            }}
+        if segue.identifier == "ShowDetail" {
+            if let dataSend = titleButton {
+                let controller = segue.destination as! DetailVC
+                controller.getData = dataSend
+            }
+        }
     }
-    private struct Storyboard {
-        static let ShowImageSegue = "ShowDetail"
-    }
+
 }
 
 
