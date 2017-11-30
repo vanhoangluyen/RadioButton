@@ -86,11 +86,44 @@
                         <outletCollection property="radioButtons" destination="wdN-5I-vr6" collectionClass="NSMutableArray" id="eda-Ul-VpY"/>
                         <outletCollection property="radioButtons" destination="BAc-sA-fpd" collectionClass="NSMutableArray" id="cGE-Rz-cga"/>
                         <outletCollection property="radioButtons" destination="yab-Uo-ohf" collectionClass="NSMutableArray" id="MFt-Lq-RiF"/>
+                        <segue destination="EwC-3E-eRZ" kind="showDetail" identifier="ShowDetail" id="k7f-aE-EV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzW-eZ-cTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="108.39580209895054"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="pkY-bJ-tcE">
+            <objects>
+                <viewController id="EwC-3E-eRZ" customClass="DetailViewController" customModule="RadioButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKm-ja-WCW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZF-wN-Tqf">
+                                <rect key="frame" x="86" y="235" width="175" height="118"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EZF-wN-Tqf" firstAttribute="leading" secondItem="f95-GB-UMv" secondAttribute="leading" constant="86" id="QJ2-BR-EWN"/>
+                            <constraint firstItem="EZF-wN-Tqf" firstAttribute="top" secondItem="f95-GB-UMv" secondAttribute="top" constant="215" id="R9h-mQ-JAW"/>
+                            <constraint firstItem="f95-GB-UMv" firstAttribute="bottom" secondItem="EZF-wN-Tqf" secondAttribute="bottom" constant="314" id="bnu-Jt-215"/>
+                            <constraint firstItem="f95-GB-UMv" firstAttribute="trailing" secondItem="EZF-wN-Tqf" secondAttribute="trailing" constant="114" id="fFB-cn-ZNm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f95-GB-UMv"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="EZF-wN-Tqf" id="sYK-NM-8OB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czT-hl-LjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029.5999999999999" y="108.39580209895054"/>
         </scene>
     </scenes>
 </document>
